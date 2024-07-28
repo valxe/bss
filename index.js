@@ -25210,20 +25210,72 @@ function BeeSwarmSimulator(DATA){
             }
         }
         
-        document.onkeydown=function(e){
-            
-            out.keys[e.key.toLowerCase()]=true
-            out.clickedKeys[e.key.toLowerCase()]=true
+        document.onkeydown = function(e) {
+
+            const key = e.key.toLowerCase();
+
+            switch (key) {
+                case 'z':
+                    out.keys['w'] = true;
+                    out.clickedKeys['w'] = true;
+                    break;
+                case 'q':
+                    out.keys['a'] = true;
+                    out.clickedKeys['a'] = true;
+                    break;
+                case 's':
+                    out.keys['s'] = true;
+                    out.clickedKeys['s'] = true;
+                    break;
+                case 'd':
+                    out.keys['d'] = true;
+                    out.clickedKeys['d'] = true;
+                    break;
+                case 'e':
+                    if (player.currentMachineTrigger) {
+                        player.currentMachineTrigger.func(player);
+                    }
+                    out.keys['e'] = true;
+                    out.clickedKeys['e'] = true;
+                    break;
+                case ' ':
+
+                    player.jump();
+                    out.keys[' '] = true;
+                    out.clickedKeys[' '] = true;
+                    break;
+            }
             
             if(e.key==='i') inventoryButton.onclick()
-            if(e.key==='q') questButton.onclick()
+            if(e.key==='a') questButton.onclick()
 
             if(player.currentMachineTrigger&&e.key==='e') player.currentMachineTrigger.func(player)
         }
         
         document.onkeyup=function(e){
             
-            out.keys[e.key.toLowerCase()]=false
+            const key = e.key.toLowerCase();
+
+            switch (key) {
+                case 'z':
+                    out.keys['w'] = false;
+                    break;
+                case 'q':
+                    out.keys['a'] = false;
+                    break;
+                case 's':
+                    out.keys['s'] = false;
+                    break;
+                case 'd':
+                    out.keys['d'] = false;
+                    break;
+                case 'e':
+                    out.keys['e'] = false;
+                    break;
+                case ' ':
+                    out.keys[' '] = false;
+                    break;
+            }
             
             if('123456'.indexOf(e.key)>-1){
                 
