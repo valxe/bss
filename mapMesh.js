@@ -1,4 +1,4 @@
-window.mapMesh=`
+window.mapMesh = `
 box(0,-5,0,59.9,7,100,false,[0.2,0.8,0.2],true,false);
 box(0,-5,26,170,7,70,false,[0.2,0.8,0.2],true,false);
 
@@ -1387,4 +1387,4 @@ box(-70.5,11.25,33.25,20,6,9.25,false,[1,0,0,0.5],typeof INFO.allowed_blueHQ==='
 box(-70.5,10,37.5,20,5,7,[50,0,0],[1,0,0,0.5],typeof INFO.allowed_blueHQ==='string',false,false);
 box(-70.5,10,28.5,20,5,7,[-50,0,0],[1,0,0,0.5],typeof INFO.allowed_blueHQ==='string',false,false);
 box(51,11.25,15.5,30,60,29.5,false,[1,0,0,0.5],typeof INFO.allowed_redHQ==='string',false,false);
-`
+`;

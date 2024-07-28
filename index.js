@@ -41691,7 +41691,7 @@ function BeeSwarmSimulator(DATA) {
           break;
 
         case " ":
-            player.verticalVelocity = player.jumpStrength;
+          player.verticalVelocity = player.jumpStrength;
           out.keys[" "] = true;
           out.clickedKeys[" "] = true;
           break;
